@@ -6,12 +6,18 @@
 }
 
 body {
+    
     background-color: hsl(230, 17%, 14%);
+    padding: 50px 0;
 }
 
-.title h1 {
-    color: hsl(0, 0%, 100%);
+.headingSec {
+    justify-content: space-between;
+    align-items: center;
+}
 
+.title h1,h2 {
+    color: var(--secondaryColor);
 }
 
 .title p span {
@@ -22,7 +28,7 @@ body {
     position: relative;
     display: inline-block;
     width: 60px;
-    height: 34px;
+    height: 30px;
 }
 
 .switch input {
@@ -81,12 +87,16 @@ input:checked+.slider:before {
 .digit {
     font-family: 'Outfit', sans-serif;
     font-size: 2.5rem;
+    color: var(--secondaryColor);
 }
 
-.followerBox {}
+.followerBox:hover {
+    cursor: pointer;
+    background: var(--hoverColor);
+}
 
 .boxBorder {
-    background-color: hsl(228, 28%, 20%);
+    background-color: var(--cardColor);
     border-radius: 2%;
 }
 
@@ -100,6 +110,7 @@ input:checked+.slider:before {
 
 .instaBox {
     border-top: 2px solid;
+    border-image-source: linear-gradient(to left, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     /* background: linear-gradient(hsl(37, 97%, 70%) , hsl(329, 70%, 58%)); */
     /* border-image:linear-gradient(hsl(37, 97%, 70%) , hsl(329, 70%, 58%)); */
 }
@@ -117,14 +128,69 @@ input:checked+.slider:before {
 .followerBox li:nth-child(1) {
     margin: 10px 0;
 }
-
+.followerBox li {
+  color: var(--listColor);
+}
 .subText {
     color: hsl(228, 34%, 66%);
     font-size: 0.9rem;
     letter-spacing: 0.3rem;
 }
 
-.dark-mode {
-    background-color: black;
-    color: white;
+.light-mode {
+    background-color: hsl(0, 0%, 100%);
+    color:  hsl(230, 17%, 14%);
+    
 }
+
+.innerBox {
+    padding: 20px;
+    background-color: var(--cardColor);
+    cursor: pointer;
+}
+.innerBox:hover {
+  background-color: var(--hoverColor);
+}
+
+ul.top_grid_list {
+    margin: 0 auto;
+    /* text-align: center; */
+    display: block;
+    padding: 0.8rem;
+}
+
+ul.top_grid_list li {
+    display: inline-block;
+    width: 49%;
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--listColor);
+}
+body,
+body[data-theme="light"] {
+  --primaryColor:  hsl(0, 0%, 100%) ;
+  --secondaryColor: hsl(230, 17%, 14%);
+  --cardColor: hsl(227, 47%, 96%);
+  --hoverColor:hsl(227,17%,86%);
+  --listColor:hsl(230, 17%, 14%);
+}
+
+body[data-theme="dark"] {
+  --primaryColor: #343837;
+  --secondaryColor: #f3ece7;
+  --cardColor: hsl(228, 28%, 20%);
+  --hoverColor:rgb(98, 103, 116);
+  --listColor:hsl(0, 0%, 100%);
+
+}
+
+/* body {
+  background-color: var(--thirdColor);
+  color: #fffffd;
+} */
+
+
+
+
+
+
