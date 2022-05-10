@@ -184,10 +184,24 @@ body[data-theme="dark"] {
 
 }
 
-/* body {
+body,
+button {
+  background-color: var(--primaryColor);
+}
+
+p,
+button {
+  color: var(--secondaryColor);
+}
+
+;
+
+
+
+body {
   background-color: var(--thirdColor);
   color: #fffffd;
-} */
+}
 
 
 
