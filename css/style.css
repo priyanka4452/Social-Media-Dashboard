@@ -175,7 +175,7 @@ ul.top_grid_list {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
   justify-content: space-between;
   padding: 0.6rem;
   margin: 8px 0;
@@ -217,7 +217,7 @@ button {
   color: var(--secondaryColor);
 };
 
-@media screen and (max-width:992px){
+@media screen and (max-width:767px){
   ul.top_grid_list {
     gap: 58px !important;
   }
