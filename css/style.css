@@ -1,186 +1,209 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Josefin+Sans:wght@400;700&family=Outfit:wght@400;700&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    
-    background-color: hsl(230, 17%, 14%);
-    padding: 50px 0;
+
+  background-color: hsl(230, 17%, 14%);
+  padding: 50px 0;
 }
 
 .headingSec {
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.title h1,h2 {
-    color: var(--secondaryColor);
+.title h1, h2 {
+  color: var(--secondaryColor);
 }
 
 .title p span {
-    color: hsl(228, 34%, 66%);
+  color: hsl(228, 34%, 66%);
 }
 
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
 }
 
 .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+  background-color: #2196F3;
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 /* Rounded sliders */
 .slider.round {
-    border-radius: 34px;
+  border-radius: 34px;
 }
 
 .slider.round:before {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .digit {
-    font-family: 'Outfit', sans-serif;
-    font-size: 2.5rem;
-    color: var(--secondaryColor);
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5rem;
+  color: var(--secondaryColor);
 }
 
 .followerBox:hover {
-    cursor: pointer;
-    background: var(--hoverColor);
+  cursor: pointer;
+  background: var(--hoverColor);
 }
 
 .boxBorder {
-    background-color: var(--cardColor);
-    border-radius: 2%;
+  background-color: var(--cardColor);
+  border-radius: 2%;
 }
 
 .fbBox {
-    border-top: 2px solid hsl(208, 92%, 53%);
+  border-top: 2px solid hsl(208, 92%, 53%);
 }
 
 .twitterBox {
-    border-top: 2px solid hsl(203, 89%, 53%);
+  border-top: 2px solid hsl(203, 89%, 53%);
+}
+
+.card-wrapper.instagram {
+  background-image: linear-gradient(to right, #fdc468, #df4996);
 }
 
 .instaBox {
-    border-top: 2px solid;
-    border-image-source: linear-gradient(to left, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-    /* background: linear-gradient(hsl(37, 97%, 70%) , hsl(329, 70%, 58%)); */
-    /* border-image:linear-gradient(hsl(37, 97%, 70%) , hsl(329, 70%, 58%)); */
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to left, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1 0% 0%;
+
+
 }
 
 .youTubeBox {
-    border-top: 2px solid hsl(348, 97%, 39%);
+  border-top: 2px solid hsl(348, 97%, 39%);
+}
+
+.followerBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 10px;
 }
 
 .followerBox li:last-child {
-    font-size: 0.7rem;
-    color: hsl(163, 72%, 41%);
-    margin-top: 12px;
+  font-size: 0.7rem;
+  color: hsl(163, 72%, 41%);
+  margin-top: 12px;
+  border-radius: 5px 5px 10px 10px;
+  padding-top: 4px;
+
 }
 
 .followerBox li:nth-child(1) {
-    margin: 10px 0;
+  margin: 10px 0;
 }
+
 .followerBox li {
   color: var(--listColor);
 }
+
 .subText {
-    color: hsl(228, 34%, 66%);
-    font-size: 0.9rem;
-    letter-spacing: 0.3rem;
+  color: hsl(228, 34%, 66%);
+  font-size: 0.9rem;
+  letter-spacing: 0.3rem;
 }
 
 .light-mode {
-    background-color: hsl(0, 0%, 100%);
-    color:  hsl(230, 17%, 14%);
-    
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(230, 17%, 14%);
+
 }
 
 .innerBox {
-    padding: 20px;
-    background-color: var(--cardColor);
-    cursor: pointer;
+  padding: 20px;
+  background-color: var(--cardColor);
+  cursor: pointer;
 }
+
 .innerBox:hover {
   background-color: var(--hoverColor);
 }
 
 ul.top_grid_list {
-    margin: 0 auto;
-    /* text-align: center; */
-    display: block;
-    padding: 0.8rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  padding: 0.6rem;
+  margin: 8px 0;
 }
 
 ul.top_grid_list li {
-    display: inline-block;
-    width: 49%;
-    padding: 0 1rem;
-    margin-bottom: 0.5rem;
-    color: var(--listColor);
+  display: inline-block;
+  /* width: 49%; */
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--listColor);
 }
+
 body,
 body[data-theme="light"] {
-  --primaryColor:  hsl(0, 0%, 100%) ;
+  --primaryColor: hsl(0, 0%, 100%);
   --secondaryColor: hsl(230, 17%, 14%);
   --cardColor: hsl(227, 47%, 96%);
-  --hoverColor:hsl(227,17%,86%);
-  --listColor:hsl(230, 17%, 14%);
+  --hoverColor: hsl(227, 17%, 86%);
+  --listColor: hsl(230, 17%, 14%);
 }
 
 body[data-theme="dark"] {
   --primaryColor: #343837;
   --secondaryColor: #f3ece7;
   --cardColor: hsl(228, 28%, 20%);
-  --hoverColor:rgb(98, 103, 116);
-  --listColor:hsl(0, 0%, 100%);
+  --hoverColor: rgb(98, 103, 116);
+  --listColor: hsl(0, 0%, 100%);
 
 }
 
@@ -192,19 +215,10 @@ button {
 p,
 button {
   color: var(--secondaryColor);
+};
+
+@media screen and (max-width:992px){
+  ul.top_grid_list {
+    gap: 58px !important;
+  }
 }
-
-;
-
-
-
-body {
-  background-color: var(--thirdColor);
-  color: #fffffd;
-}
-
-
-
-
-
-
